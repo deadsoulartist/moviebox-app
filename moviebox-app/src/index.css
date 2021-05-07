@@ -2,7 +2,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black: rgb(17, 0, 36);
+  --white: rgb(255, 255, 255);
+}
+body.light {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+body.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 body {
+  background-color: var(--white);
+  color: var(--black);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -52,9 +68,76 @@ code {
 
 .movie-over {
   position: absolute;
+  padding: 1rem;
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: auto;
+  max-height: 100%;
+  background-color: rgb(224, 224, 224);
+  color: black;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* hover */
+.movie:hover .movie-over {
+  transform: translateY(0);
+}
+
+/* input */
+header {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 1rem;
+}
+
+header h1 {
+  padding: 20;
+  margin: 0;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+}
+
+.search {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 2px 8px 4px 8px;
+  border: none;
+  border-radius: px;
+}
+
+.search:focus {
+  outline: 0;
+}
+
+input > placeholder {
+  color: black;
+}
+
+/* rating */
+.tag {
   background-color: white;
   color: black;
+  padding: 0.2rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tag.green {
+  background-color: green;
+  color: white;
+}
+
+.tag.orange {
+  background-color: orange;
+  color: white;
+}
+.tag.red {
+  background-color: red;
+  color: white;
 }
