@@ -3,7 +3,7 @@
 }
 
 :root {
-  --black: rgb(17, 0, 36);
+  --black: #0f1824;
   --white: rgb(255, 255, 255);
 }
 body.light {
@@ -140,4 +140,21 @@ input > placeholder {
 .tag.red {
   background-color: red;
   color: white;
+}
+
+/* responsive */
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.8rem;
+    left: 1rem;
+    top: 0.5rem;
+  }
+  .search {
+    width: 150px;
+    font-size: 1rem;
+    padding: 2px 8px 4px 8px;
+    border: none;
+    border-radius: px;
+  }
 }
