@@ -43,9 +43,9 @@ function App() {
   return (
     <div>
       <header>
-        <a href src="">
+
           <h1>MovieBox</h1>
-        </a>
+  
         <DarkMode />
         <form onSubmit={handleOnSubmit}>
           <input
